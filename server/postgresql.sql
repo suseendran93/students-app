@@ -1,5 +1,5 @@
 --CREATE A DB---
-CREATE DATABASE students;
+-- CREATE DATABASE students;
 
 
 -- CREATE A TABLE---

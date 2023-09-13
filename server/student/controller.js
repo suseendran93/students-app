@@ -22,7 +22,7 @@ const getStudentById = (req, res) => {
 
 const addStudent = (req, res) => {
   const { name, email, age, dob } = req.body;
-
+  console.log(req.body);
   //check if email already exists in table
   pool.query(queries.checkEmailExists, [email], (err, results) => {
     if (results.rows.length) {
@@ -30,7 +30,10 @@ const addStudent = (req, res) => {
     }
     // add student to db
     pool.query(queries.addStudent, [name, email, age, dob], (err, results) => {
-      if (err) throw err;
+      if (err) {
+        console.log(err);
+        throw err;
+      }
       res.status(201).send("Student created successfully!");
     });
   });

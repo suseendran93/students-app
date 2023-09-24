@@ -79,3 +79,19 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+
+/* StudentList.css */
+
+/* Style for the student list container */
+.student-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style for each student item */
+.student-item {
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  margin: 5px 0;
+  padding: 10px;
+}

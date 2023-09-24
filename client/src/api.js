@@ -15,5 +15,13 @@ const addStudent = async (formdata) => {
       console.log(error);
     });
 };
+const getStudents = async () => {
+  return fetch("http://localhost:5000/api/v1/students/")
+    .then((response) => response.json())
 
-export { addStudent };
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
+export { addStudent, getStudents };
